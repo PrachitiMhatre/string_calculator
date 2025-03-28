@@ -7,15 +7,24 @@ class CalculatorController < ApplicationController
       @result = 0
       @error_message = nil
     else
-      # Handle custom delimiter
+       # Check if the string starts with "//" indicating a custom delimiter
       if numbers.start_with?("//")
-        delimiter_line, numbers = numbers.split("\n", 2)
-        delimiter = delimiter_line[2..-1] # Extract the custom delimiter
-        numbers = numbers.gsub("\n", delimiter) # Replace newlines with the custom delimiter
+        # delimiter_line, numbers = numbers.scan(/^(\/\/.*)\n(.*)$/).flatten
+        parts = numbers.split("\\n", 2)
+        
+        delimiter_line = parts[0]
+        numbers = parts[1]
+        
+      # # Extract the custom delimiter (skip "//" from the delimiter line)
+        delimiter = delimiter_line[2..-1]  # Extract the custom delimiter after "//"
+
+      # Replace all newlines with the custom delimiter
+        numbers = numbers.gsub("\n", delimiter) 
+         # Replace newline between the numbers with the delimiter
       else
-        delimiter = ',' # Default delimiter
+        delimiter = ','  # Default delimiter is a comma
       end
-      # Split numbers by the delimiter
+       numbers.split(delimiter).map(&:to_i).sum
       number_array = numbers.split(delimiter)
       # Convert strings to integers and check for negative numbers
       negatives = []
