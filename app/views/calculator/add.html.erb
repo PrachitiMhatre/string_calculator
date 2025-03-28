@@ -1,0 +1,33 @@
+<!-- app/views/calculator/add.html.erb -->
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+  <div class="card px-1 py-4">
+    <div class="card-body">
+      <h6 class="card-title mb-3">String Calculator</h6>
+      <div class="d-flex flex-row"> 
+        <%= form_with url: root_path, method: :get, local: true,id: "inputForm" do |form| %>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= form.label :numbers, "Enter numbers (comma-separated or custom delimiter):" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+              <%= form.text_field :numbers, class: "form-control" %>
+              </div>
+            </div>
+          </div>
+          <%= submit_tag "Calculate", class: "btn btn-primary mb-3" %>
+        <% end %>       
+      </div>
+       <%if @result != nil %>
+            <h5>Result: <%= @result %></h5>
+            <% end %>
+          <% if @error_message %>
+          <h6 style="color: red;">Error: <%= @error_message %></h6>
+        <% end %>
+    </div>
+  </div>
+</div>
