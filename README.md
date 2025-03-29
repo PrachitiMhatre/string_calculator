@@ -19,11 +19,13 @@ Follow these steps to get the app running locally.
 ### 1. Clone the Repository
 
 - **Backend Repo**
+
 `git clone https://github.com/PrachitiMhatre/string_calculator.git`
 
 `cd string_calculator`
 
 - **Frontend Repo**
+
 `git clone https://github.com/PrachitiMhatre/string-calculator-react.git`
 
 `cd string-calculator-git`
