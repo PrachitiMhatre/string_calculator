@@ -19,22 +19,28 @@ class CalculatorController < ApplicationController
       else
         delimiter = ','
       end
-       numbers.split(delimiter).map(&:to_i).sum
+      numbers.split(delimiter).map(&:to_i).sum
       number_array = numbers.split(delimiter)
 
-      negatives = []
-      @result = number_array.reduce(0) do |total, num|
-        num = num.to_i
-        negatives << num if num < 0
-        total + num
-      end
+      @negatives = []
+      @result = negative_number(number_array)
 
-      if negatives.any?
-        @error_message = "Negative numbers not allowed: #{negatives.join(', ')}"
+      if @negatives.any?
+        @error_message = "Negative numbers not allowed: #{@negatives.join(', ')}"
         @result = nil
       else
         @error_message = nil
       end
+    end
+  end
+
+  private
+
+  def negative_number(number_array)
+    number_array.reduce(0) do |total, num|
+      num = num.to_i
+      @negatives << num if num < 0
+      total + num
     end
   end
 end

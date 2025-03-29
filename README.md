@@ -6,6 +6,7 @@ This repository contains a full-stack string calculator application built using 
 
 - **Add Numbers:** Users can input a string of comma-separated numbers, and the app will return the sum.
 - **Supports Empty Strings:** An empty string returns a sum of `0`.
+- **Validation for Negative Numbers:** If the user input contains negative number it will return with error message.
 
 ## Requirements
 
@@ -86,6 +87,19 @@ Output: 0
 Run the test suite with RSpec:
 
 `bundle exec rspec`
+
+## Screenshot
+
+Here is a screenshot of the application:
+
+![App Screenshot1](assets/images/Screenshot1.png)
+
+![App Screenshot2](assets/images/Screenshot2.png)
+
+![App Screenshot3](assets/images/Screenshot3.png)
+
+![App Screenshot4](assets/images/Screenshot4.png)
+
 
 
 
