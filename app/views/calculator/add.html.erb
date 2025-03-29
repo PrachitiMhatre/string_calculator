@@ -19,11 +19,12 @@
               </div>
             </div>
           </div>
-          <%= submit_tag "Calculate", class: "btn btn-primary mb-3" %>
+          &nbsp;
+          <%= submit_tag "Calculate", class: "btn btn-primary mb-3 w-50", style: "margin-top: 4%;" %>
         <% end %>       
       </div>
        <%if @result != nil %>
-            <h5>Result: <%= @result %></h5>
+            <h6>Result: <%= @result %></h6>
             <% end %>
           <% if @error_message %>
           <h6 style="color: red;">Error: <%= @error_message %></h6>
