@@ -92,13 +92,13 @@ Run the test suite with RSpec:
 
 Here is a screenshot of the application:
 
-![App Screenshot1](assets/images/Screenshot1.png)
+![App Screenshot1](app/assets/images/Screenshot1.png)
 
-![App Screenshot2](assets/images/Screenshot2.png)
+![App Screenshot2](app/assets/images/Screenshot2.png)
 
-![App Screenshot3](assets/images/Screenshot3.png)
+![App Screenshot3](app/assets/images/Screenshot3.png)
 
-![App Screenshot4](assets/images/Screenshot4.png)
+![App Screenshot4](app/assets/images/Screenshot4.png)
 
 
 
