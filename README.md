@@ -18,11 +18,11 @@ This repository contains a full-stack string calculator application built using 
 Follow these steps to get the app running locally.
 ### 1. Clone the Repository
 
-## Backend Repo
+- **Backend Repo**
 `git clone https://github.com/PrachitiMhatre/string_calculator.git`
 `cd string_calculator`
 
-## Frontend Repo
+- **Frontend Repo**
 `git clone https://github.com/PrachitiMhatre/string-calculator-react.git`
 `cd string-calculator-git`
 
@@ -34,13 +34,13 @@ Make sure you have Ruby and Rails installed on your machine. Then, install the r
 
 ### 3. Run the Application
 
-## For Backend
+- **Backend**
 
 Start the Rails server:
 
 `rails s`
 
-## For Frontend
+- **Frontend**
 
 Start the npm server
 
@@ -51,11 +51,10 @@ By default, the app will be accessible at http://localhost:3000.
 
 ### 4. Access the Application
 
-## Frontend
+- **Frontend**
 Open your browser and go to http://localhost:4000.
 
-## Backend
-
+- **Backend**
 Open your browser and go to http://localhost:3000.
 
 ## Usage
