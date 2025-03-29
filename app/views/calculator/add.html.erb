@@ -19,16 +19,19 @@
               </div>
             </div>
           </div>
-          &nbsp;
-          <%= submit_tag "Calculate", class: "btn btn-primary mb-3 w-50", style: "margin-top: 4%;" %>
+          <div class="col-sm-12">
+            <%= submit_tag "Calculate", class: "btn btn-primary mb-3 w-50", style: "margin-top: 4%;" %>
         <% end %>       
+        </div>
       </div>
-       <%if @result != nil %>
-            <h6>Result: <%= @result %></h6>
-            <% end %>
-          <% if @error_message %>
-          <h6 style="color: red;">Error: <%= @error_message %></h6>
-        <% end %>
+
+      <%if @result != nil %>
+        <h6>Result: <%= @result %></h6>
+      <% end %>
+
+      <% if @error_message %>
+        <h6 style="color: red;">Error: <%= @error_message %></h6>
+      <% end %>
     </div>
   </div>
 </div>
